@@ -27,6 +27,12 @@ Instead of constructing a separate output array, the in place version of this al
 
 You will note that at any moment, all elements in the array before index `i` are sorted, as `i` reaches the end, the entire array is sorted.
 
+Insertion Sort can also be expressed as a recursive procedure, but that is unnecessary.
+TODO: elaborate this further and add the code for this
+
+The scanning part of the Insertion Sort algorithm is searching in a sorted array, this can be made more efficient by using Binary Search. However, as the shifting part still takes linear time, using Binary Search for scanning will not change the overall time complexity of the algorithm.
+TODO: add code for this approach
+
 # Complexity Analysis
 
 ## Time

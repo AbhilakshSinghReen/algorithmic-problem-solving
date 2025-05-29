@@ -38,7 +38,7 @@ void merge(vector<int> &inputArray, int p, int q, int r, vector<int> &extraSpace
 
 void mergeSortRecursive(
         vector<int> &inputArray, int subArrayStart, int subArrayEnd, vector<int> &extraSpace) {
-    if (subArrayEnd == subArrayStart) {
+    if (subArrayEnd <= subArrayStart) {
         return;
     }
 
