@@ -1,11 +1,15 @@
 #include <iostream>
 
 #include "data_structures/trie.h"
+#include "metrics/timer.h"
 
 using namespace std;
 
 int main() {
+    Timer timer = Timer(true);
+
     Trie trie = Trie();
+    timer.markEventCompleted("Trie constructed");
 
     trie.insert("hello");
     trie.insert("goodbye");
@@ -30,6 +34,11 @@ int main() {
     cout << trie.search("cplusplus") << "    [11] \n";
     cout << trie.search("cplusplu") << "    [12] \n";
     cout << trie.startsWith("cplusplusp") << "    [13] \n";
+    cout << "Delete success: " << trie.deleteWord("goodday") << "    [13.1] \n";
+    cout << "Delete success: " << trie.deleteWord("cplusplus") << "    [13.2] \n";
+
+    timer.markEventCompleted("All operations done");
+    timer.printEventDurations();
 
     return 0;
 }
