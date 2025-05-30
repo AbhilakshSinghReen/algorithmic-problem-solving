@@ -1,7 +1,5 @@
 #include <string>
 
-using namespace std;
-
 class TrieNode {
   private:
     char nodeChar;
