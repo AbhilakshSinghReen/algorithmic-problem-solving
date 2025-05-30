@@ -135,7 +135,8 @@ bool Trie::deleteWord(string word) {
 
     // pathNodes has the same length as word and pathNodes[i] contains the parent of the char in
     // word[i] Traverse the reverse path
-    for (int i = pathNodes.size() - 1; i >= 0; i--) {
+    int numNodesInPath = pathNodes.size();
+    for (int i = numNodesInPath - 1; i >= 0; i--) {
         TrieNode *charParentNode = pathNodes[i];
         char wordChar = word[i];
 

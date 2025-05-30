@@ -8,8 +8,9 @@ using namespace std;
 void insertionSort(vector<int> &inputArray) {
     // This function implements the In Place version of the algorithm defined in
     // the docs.
+    int n = inputArray.size();
 
-    for (int i = 1; i < inputArray.size(); i++) {
+    for (int i = 1; i < n; i++) {
         int elementToInsert = inputArray[i];
 
         // TODO: we can just have one loop for the check and the moving forward,

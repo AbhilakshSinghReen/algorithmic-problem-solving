@@ -31,8 +31,8 @@ class Trie {
     Trie();
     ~Trie();
 
-    void insert(string word);
-    bool search(string word);
-    bool startsWith(string prefix);
-    bool deleteWord(string word);
+    void insert(std::string word);
+    bool search(std::string word);
+    bool startsWith(std::string prefix);
+    bool deleteWord(std::string word);
 };

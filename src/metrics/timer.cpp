@@ -34,7 +34,8 @@ void Timer::markEventCompleted(string eventName) {
 vector<pair<string, duration<double, micro>>> Timer::getEventDurations() {
     vector<pair<string, duration<double, micro>>> eventDurations;
 
-    for (size_t i = 0; i < eventNames.size(); i++) {
+    int numEvents = eventDurations.size();
+    for (int i = 0; i < numEvents; i++) {
         duration<double, micro> eventDuration = timestamps[i + 1] - timestamps[i];
         pair<string, duration<double, micro>> eventNameAndDuration =
                 make_pair(eventNames[i], eventDuration);
@@ -47,7 +48,8 @@ vector<pair<string, duration<double, micro>>> Timer::getEventDurations() {
 void Timer::printEventDurations() {
     vector<pair<string, duration<double, micro>>> eventDurations = getEventDurations();
 
-    for (size_t i = 0; i < eventDurations.size(); i++) {
+    int numEvents = eventDurations.size();
+    for (int i = 0; i < numEvents; i++) {
         cout << eventDurations[i].first << ": " << eventDurations[i].second.count() << "us" << "\n";
     }
 }
