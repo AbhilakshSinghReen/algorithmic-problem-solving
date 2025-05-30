@@ -1,7 +1,4 @@
-**/*.o
-
-my_program
-
+# Compiled object files and Linked final executable
 build
 
 .vscode
