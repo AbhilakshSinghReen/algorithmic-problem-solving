@@ -1,3 +1,4 @@
+#include <cassert>
 #include <iostream>
 
 #include "data_structures/trie.h"
@@ -11,6 +12,9 @@ Trie createTrie() {
 }
 
 int main() {
+    assert(true == false);
+    return 0;
+
     Trie f2 = createTrie();
     return 0;
 
