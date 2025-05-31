@@ -5,7 +5,15 @@
 
 using namespace std;
 
+Trie createTrie() {
+    Trie f = Trie();
+    return f;
+}
+
 int main() {
+    Trie f2 = createTrie();
+    return 0;
+
     // Timer timer = Timer(true);
 
     Trie trie = Trie();
